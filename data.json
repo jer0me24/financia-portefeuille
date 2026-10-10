@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10T09:30:15+02:00",
+ "generated_at": "2026-10-10T09:51:54+02:00",
  "source": "financia-portefeuille-paper-50k.xlsx",
  "recalculated": true,
  "capital": 50000.0,
@@ -577,14 +577,14 @@
   }
  ],
  "regles": [
-  "Répartition cible : Cœur ~70 %, Tactique ~19 %, Cash ~11 % du capital.",
+  "Répartition au Point 0 : Cœur ~70 %, Tactique ~19 %, Cash ~11 % (cash au-dessus de la cible à titre temporaire, voir règle 8).",
   "Bloc IA (y compris valeurs liées à l'IA comme CEG) plafonné à 45 % du portefeuille ; alerte et revue dès 42 %.",
   "Au-dessus de 42 % d'IA : aucun nouvel achat lié à l'IA ; au-dessus de 45 % : alléger pour revenir sous le plafond.",
   "Chaque position tactique a un stop défini à l'entrée (-8 % à -10 %) et il est respecté sans exception.",
   "Risque maximal par position tactique : environ 0,5 à 0,7 % du capital (≈ 250-350 EUR).",
   "Une position tactique qui atteint sa cible est prise en profit (totalement ou partiellement) puis le stop est remonté.",
   "Les positions du Cœur se gèrent sur le long terme : on ne vend que si la thèse est invalidée.",
-  "Garder au moins ~10 % de cash pour saisir des opportunités et amortir les baisses.",
+  "Cash : minimum 2 % du capital, cible 2–5 % (cadre agressif validé). Le niveau actuel (~11 %) est un choix temporaire jusqu'au CPI américain du 14 oct., puis redéploiement par tranches.",
   "Pas de levier, pas de vente à découvert, pas de produits dérivés.",
   "Toute opération est notée dans l'onglet Journal avec son motif.",
   "Revue complète du portefeuille au moins une fois par mois et après tout mouvement de marché important."
