@@ -21,6 +21,8 @@
   // Line chart
   const labels = D.snapshots.map(s => fdate(s.date, { weekday: 'short', day: 'numeric', month: 'short' }));
   const vals = D.snapshots.map(s => s.total);
+  const bvals = D.snapshots.map(s => s.bench_base);
+  const hasBench = bvals.some(v => v != null);
   const ctx = $('c-line').getContext('2d');
   const grad = ctx.createLinearGradient(0, 0, 0, 280);
   grad.addColorStop(0, 'rgba(59,91,219,.25)'); grad.addColorStop(1, 'rgba(59,91,219,0)');
@@ -28,15 +30,28 @@
     type: 'line',
     data: { labels, datasets: [
       { label: 'Valeur du portefeuille', data: vals, borderColor: '#3b5bdb', backgroundColor: grad, fill: true, tension: .3, pointRadius: 4, pointBackgroundColor: '#3b5bdb', borderWidth: 2.5 },
+      ...(hasBench ? [{ label: (D.benchmark && D.benchmark.label) || 'MSCI World (base 50 000 €)', data: bvals, borderColor: '#0f9d58', backgroundColor: '#0f9d58', fill: false, tension: .3, pointRadius: 3, pointStyle: 'rectRot', borderWidth: 2, spanGaps: true }] : []),
       { label: 'Départ : 50 000 €', data: vals.map(() => D.capital), borderColor: '#94a3b8', borderDash: [6, 5], pointRadius: 0, borderWidth: 1.5, fill: false }
     ] },
     options: { maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
       plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, usePointStyle: true } },
         tooltip: { callbacks: { label: c => c.dataset.label + ' : ' + eur(c.parsed.y, 2) } } },
       scales: { y: { ticks: { callback: v => eur(v) }, grid: { color: '#eef0f6' },
-        suggestedMin: Math.min(...vals, D.capital) - 300, suggestedMax: Math.max(...vals, D.capital) + 300 },
+        suggestedMin: Math.min(...vals, ...bvals.filter(v => v != null), D.capital) - 300, suggestedMax: Math.max(...vals, ...bvals.filter(v => v != null), D.capital) + 300 },
         x: { grid: { display: false } } } }
   });
+
+  // Benchmark headline (dernier jour disposant d'une clôture MSCI World)
+  const lb = D.snapshots.slice().reverse().find(s => s.bench_pct != null);
+  if (lb) {
+    const gap = lb.bench_gap_pts != null ? lb.bench_gap_pts : (lb.pnl_total_pct - lb.bench_pct) * 100;
+    const ahead = gap >= 0;
+    const fmtPts = v => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' pts';
+    const el = $('bench'); el.hidden = false; el.className = 'bench ' + (ahead ? 'ahead' : 'behind');
+    el.innerHTML = `<span>Portefeuille <b>${pct(lb.pnl_total_pct, 2, true)}</b> vs MSCI World <b>${pct(lb.bench_pct, 2, true)}</b> depuis le ${fdate(D.point0, { day: 'numeric', month: 'short' })}</span>
+      <span class="gap">→ écart <b>${fmtPts(gap)}</b> ${ahead ? '· en avance' : '· en retard'}</span>` +
+      (lb.date !== L.date ? `<span class="nm">(MSCI World connu jusqu'au ${fdate(lb.date, { day: 'numeric', month: 'short' })})</span>` : '');
+  }
 
   // Donut
   const parts = [['Cœur', L.coeur, '#3b5bdb'], ['Tactique', L.tactique, '#f08c00'], ['Cash', L.cash, '#94a3b8']];

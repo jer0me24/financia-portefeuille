@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10T09:51:54+02:00",
+ "generated_at": "2026-10-10T23:26:28+02:00",
  "source": "financia-portefeuille-paper-50k.xlsx",
  "recalculated": true,
  "capital": 50000.0,
@@ -26,11 +26,21 @@
   "pnl_total_pct": 0.01065,
   "ia_pct": 0.4314,
   "notes": "Cours de clôture réels du 9 oct (Yahoo Finance ; Europe 17h35, US 22h). Point 0 = clôtures du 5 oct ; effet change USD/EUR ignoré. Hausses : CEG +4.6 %, AMZN +3.3 %, V +2.8 %, MSFT +2.4 %, LDO.MI +2.2 % ; baisses : META -0.3 %. Bloc IA 43.1 % : au-dessus de l'alerte 42 %, sous le plafond 45 %. Stops tactiques non touchés (CEG 298.07 USD > stop relevé ~268,5 USD ; TTE/HO/LDO au-dessus de leurs stops). Aucune opération. Rebound US (S&P ~+0,5–0,7 %) après scare OpenAI jeudi.",
+  "bench_close": 131.67,
+  "bench_base": 50186.77,
+  "bench_gap_pts": 0.69,
   "peak": 50532.71,
   "drawdown": 0.0,
+  "bench_pct": 0.0037353999999998333,
   "cash_pct": 0.10884039268822115
  },
  "max_drawdown": -0.008020480899234239,
+ "benchmark": {
+  "name": "MSCI World",
+  "ticker": "IWDA.AS",
+  "currency": "EUR",
+  "label": "MSCI World (base 50 000 €)"
+ },
  "snapshots": [
   {
    "date": "2026-10-05",
@@ -46,8 +56,12 @@
    "pnl_total_pct": 0.0,
    "ia_pct": 0.4286,
    "notes": "Point 0 — constitution du portefeuille (50 000 EUR). Pas de PnL jour.",
+   "bench_close": 131.18,
+   "bench_base": 50000.0,
+   "bench_gap_pts": 0.0,
    "peak": 50000.0,
-   "drawdown": 0.0
+   "drawdown": 0.0,
+   "bench_pct": 0.0
   },
   {
    "date": "2026-10-06",
@@ -63,8 +77,12 @@
    "pnl_total_pct": 0.006125,
    "ia_pct": 0.4321,
    "notes": "CEG +12,25 % (clôture 300,40 USD) ; autres lignes au montant Point 0 (cours non relevés) — valeurs approx.",
+   "bench_close": 131.87,
+   "bench_base": 50263.0,
+   "bench_gap_pts": 0.09,
    "peak": 50306.25,
-   "drawdown": 0.0
+   "drawdown": 0.0,
+   "bench_pct": 0.005260000000000042
   },
   {
    "date": "2026-10-07",
@@ -80,8 +98,12 @@
    "pnl_total_pct": 0.00722,
    "ia_pct": 0.4343,
    "notes": "Cours de clôture réels du 7 oct (US clôture 22h, Europe 17h35). Point 0 = clôtures du 5 oct pour toutes les lignes ; effet change USD/EUR ignoré. Le PnL jour inclut le rattrapage des cours du 6 oct non relevés hier ; mouvement de marché du seul 7 oct ≈ -59 EUR. Hausses : LLY +2,7 %, AMZN +1,4 % ; baisses : HO −2,7 %, LDO −2,6 %, META −2,4 %, ASML −1,6 %. Bloc IA 43.4 % : au-dessus de l'alerte 42 % (déjà le cas), sous le plafond 45 %. Stops tactiques non touchés (CEG 299,59 USD > stop 267,62). Aucune opération.",
+   "bench_close": 131.45,
+   "bench_base": 50102.91,
+   "bench_gap_pts": 0.52,
    "peak": 50361.07,
-   "drawdown": 0.0
+   "drawdown": 0.0,
+   "bench_pct": 0.00205820000000001
   },
   {
    "date": "2026-10-08",
@@ -97,8 +119,12 @@
    "pnl_total_pct": -0.00086,
    "ia_pct": 0.4294,
    "notes": "Snapshot rattrapé le 9 oct ~08:00 Paris (routine du 8 oct ~23:16 en échec). Cours de clôture réels du 8 oct (Yahoo Finance ; Europe 17h35, US 22h). Point 0 = clôtures du 5 oct ; effet change USD/EUR ignoré. Hausses : TTE +2,9 %, V +0,8 %, BRK.B +0,9 % ; baisses : CEG −4,8 %, AVGO −4,3 %, AMZN −2,3 %, ASML −1,9 %, IS3N −1,7 %, LLY −1,6 %. Bloc IA 42.9 % : au-dessus de l'alerte 42 %, sous le plafond 45 %. Stops tactiques non touchés (CEG 285,07 USD > stop relevé au prix d'achat ~268,5 USD ; TTE/HO/LDO au-dessus de leurs stops). Aucun cours manquant. Aucune opération.",
+   "bench_close": 130.98,
+   "bench_base": 49923.77,
+   "bench_gap_pts": 0.07,
    "peak": 50361.07,
-   "drawdown": -0.008020480899234239
+   "drawdown": -0.008020480899234239,
+   "bench_pct": -0.001524600000000098
   },
   {
    "date": "2026-10-09",
@@ -114,8 +140,12 @@
    "pnl_total_pct": 0.01065,
    "ia_pct": 0.4314,
    "notes": "Cours de clôture réels du 9 oct (Yahoo Finance ; Europe 17h35, US 22h). Point 0 = clôtures du 5 oct ; effet change USD/EUR ignoré. Hausses : CEG +4.6 %, AMZN +3.3 %, V +2.8 %, MSFT +2.4 %, LDO.MI +2.2 % ; baisses : META -0.3 %. Bloc IA 43.1 % : au-dessus de l'alerte 42 %, sous le plafond 45 %. Stops tactiques non touchés (CEG 298.07 USD > stop relevé ~268,5 USD ; TTE/HO/LDO au-dessus de leurs stops). Aucune opération. Rebound US (S&P ~+0,5–0,7 %) après scare OpenAI jeudi.",
+   "bench_close": 131.67,
+   "bench_base": 50186.77,
+   "bench_gap_pts": 0.69,
    "peak": 50532.71,
    "drawdown": 0.0,
+   "bench_pct": 0.0037353999999998333,
    "cash_pct": 0.10884039268822115
   }
  ],

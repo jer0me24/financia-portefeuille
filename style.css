@@ -70,3 +70,6 @@ footer{padding:22px 0 34px;color:var(--muted);font-size:13px;text-align:center}
  .kpi.main .val{font-size:32px}.kpi .val{font-size:22px}
  .chart-box{height:230px}
 }
+.bench{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;border-radius:10px;padding:9px 12px;margin:-4px 0 12px;font-size:14px}
+.bench.ahead{background:#e6f6ec;color:#0b6b3a}.bench.behind{background:#fdecea;color:#a3221b}
+.bench .gap b{font-size:15px}

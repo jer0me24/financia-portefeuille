@@ -24,7 +24,8 @@
   <section class="grid2">
     <div class="card">
       <h2>Évolution jour après jour</h2>
-      <p class="hint">Valeur totale chaque soir depuis le départ. La ligne pointillée = les 50 000 € de départ.</p>
+      <p class="hint">Valeur totale chaque soir depuis le départ, comparée au MSCI World (l'objectif : faire mieux). La ligne pointillée = les 50 000 € de départ.</p>
+      <div class="bench" id="bench" hidden></div>
       <div class="chart-box"><canvas id="c-line"></canvas></div>
     </div>
     <div class="card">
@@ -73,6 +74,7 @@
       <li><b>Le Cœur</b> (~70 %) regroupe des fonds indiciels et de grandes entreprises gardés longtemps. <b>La Tactique</b> (~19 %) contient quelques paris plus courts, chacun protégé par un <b>stop</b> : un prix plancher qui déclenche la vente pour limiter la perte.</li>
       <li><b>Bloc IA</b> : part du portefeuille liée à l'intelligence artificielle. Au-delà de 42 % on n'achète plus rien d'IA ; au-delà de 45 % on vend une partie.</li>
       <li><b>Baisse depuis le plus haut</b> (drawdown) : de combien le portefeuille est descendu depuis son meilleur soir. À −12 % on fait le point, à −18 % on gèle les achats, à −25 % on coupe le risque.</li>
+      <li><b>La référence : le MSCI World.</b> La courbe verte montre ce que seraient devenus les mêmes 50 000 € placés le 5 octobre dans un fonds indiciel mondial (MSCI World, coté en euros) ; l'objectif est de faire mieux que lui. L'écart reste approximatif : le portefeuille ne tient pas compte des variations du dollar face à l'euro, alors que ce fonds, lui, les intègre.</li>
       <li>Les montants en dollars sont convertis sans tenir compte du taux de change (simplification).</li>
     </ul>
   </section>
