@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financia — Portefeuille virtuel</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><span class="logo">F</span> Financia <span class="tag">Portefeuille virtuel</span></div>
+    <div class="kpis">
+      <div class="kpi main"><div class="lbl">Valeur actuelle</div><div class="val" id="k-total">—</div><div class="sub" id="k-date">—</div></div>
+      <div class="kpi"><div class="lbl">Aujourd'hui</div><div class="val" id="k-day">—</div><div class="sub" id="k-day-pct">—</div></div>
+      <div class="kpi"><div class="lbl">Depuis le départ (50 000 €)</div><div class="val" id="k-tot">—</div><div class="sub" id="k-tot-pct">—</div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="grid2">
+    <div class="card">
+      <h2>Évolution jour après jour</h2>
+      <p class="hint">Valeur totale chaque soir depuis le départ. La ligne pointillée = les 50 000 € de départ.</p>
+      <div class="chart-box"><canvas id="c-line"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>Répartition</h2>
+      <p class="hint">Cœur = placements long terme · Tactique = paris de quelques semaines · Cash = réserve.</p>
+      <div class="chart-box donut"><canvas id="c-donut"></canvas></div>
+      <ul class="legend" id="donut-legend"></ul>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Les garde-fous</h2>
+    <p class="hint">Trois indicateurs de risque. Vert = tout va bien, orange = vigilance, rouge = on agit.</p>
+    <div class="gauges" id="gauges"></div>
+  </section>
+
+  <section class="card">
+    <h2>Les lignes du portefeuille</h2>
+    <p class="hint">Valeurs au dernier soir. Pour les paris tactiques, « marge avant stop » = de combien le cours peut encore baisser avant la vente automatique.</p>
+    <div class="table-wrap"><table id="t-pos">
+      <thead><tr><th>Titre</th><th>Poche</th><th class="r">Valeur</th><th class="r">Poids</th><th class="r">Jour</th><th class="r">Depuis l'achat</th><th class="r">Marge avant stop</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </section>
+
+  <section class="grid2">
+    <div class="card">
+      <h2>Journal des opérations</h2>
+      <p class="hint">Achats, ventes et journées sans opération.</p>
+      <div class="journal" id="journal"></div>
+    </div>
+    <div class="card">
+      <h2>Le mot du soir</h2>
+      <p class="hint">Note enregistrée avec le dernier relevé.</p>
+      <p id="last-note" class="note"></p>
+      <details><summary>Historique des notes</summary><div id="notes-hist"></div></details>
+    </div>
+  </section>
+
+  <section class="card howto">
+    <h2>Comment lire ce site</h2>
+    <ul>
+      <li><b>C'est un portefeuille d'entraînement</b> : 50 000 € fictifs investis le 5 octobre 2026 (le « Point 0 »). Aucun argent réel n'est en jeu.</li>
+      <li><b>Chaque soir de semaine</b>, après la fermeture de la Bourse américaine, on prend une « photo » du portefeuille. Ces photos ne sont jamais retouchées : la courbe montre donc la vraie histoire.</li>
+      <li><b>Vert = gain, rouge = perte.</b> « Aujourd'hui » compare à la veille ; « depuis le départ » compare aux 50 000 € initiaux.</li>
+      <li><b>Le Cœur</b> (~70 %) regroupe des fonds indiciels et de grandes entreprises gardés longtemps. <b>La Tactique</b> (~19 %) contient quelques paris plus courts, chacun protégé par un <b>stop</b> : un prix plancher qui déclenche la vente pour limiter la perte.</li>
+      <li><b>Bloc IA</b> : part du portefeuille liée à l'intelligence artificielle. Au-delà de 42 % on n'achète plus rien d'IA ; au-delà de 45 % on vend une partie.</li>
+      <li><b>Baisse depuis le plus haut</b> (drawdown) : de combien le portefeuille est descendu depuis son meilleur soir. À −12 % on fait le point, à −18 % on gèle les achats, à −25 % on coupe le risque.</li>
+      <li>Les montants en dollars sont convertis sans tenir compte du taux de change (simplification).</li>
+    </ul>
+  </section>
+  <p class="issues" id="issues" hidden></p>
+</main>
+
+<footer>
+  <div class="wrap">Portefeuille virtuel — aucun argent réel. Données mises à jour chaque soir de semaine vers 22h30 (Paris).<br><span id="gen" class="muted"></span></div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
