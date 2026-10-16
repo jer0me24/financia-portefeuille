@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-16T11:07:22+02:00",
+ "generated_at": "2026-10-16T15:48:40+02:00",
  "source": "financia-portefeuille-paper-50k.xlsx",
  "recalculated": true,
  "capital": 50000.0,
@@ -733,6 +733,33 @@
    "prix": 63.81,
    "montant": 400.0,
    "motif": "Tranche 1 cash validée par Jérôme (16 oct) — cours Xetra 63,81 € (dernier cours 10h50, relevé 11h06 Paris), qté 6,2686 ; prix réf. moyen 62,8481 €. Pas de frais."
+  },
+  {
+   "date": "2026-10-16",
+   "ticker": "BRK.B",
+   "action": "Achat",
+   "qte": 0.8499,
+   "prix": 529.59,
+   "montant": 400.0,
+   "motif": "Tranche 1 cash validée par Jérôme (16 oct) — cours d'ouverture US 16 oct 529.59 USD (1re minute 15h30 Paris, Yahoo), qté 0.8499 via EURUSD 1.1252 ; Cœur 1500→1900 € ; prix réf. moyen 509.39 USD (change ignoré). Pas de frais."
+  },
+  {
+   "date": "2026-10-16",
+   "ticker": "V",
+   "action": "Achat",
+   "qte": 0.8387,
+   "prix": 402.5,
+   "montant": 300.0,
+   "motif": "Tranche 1 cash validée par Jérôme (16 oct) — cours d'ouverture US 16 oct 402.50 USD (1re minute 15h30 Paris, Yahoo), qté 0.8387 via EURUSD 1.1252 ; Cœur 1000→1300 € ; prix réf. moyen 376.79 USD (change ignoré). Pas de frais."
+  },
+  {
+   "date": "2026-10-16",
+   "ticker": "LLY",
+   "action": "Achat",
+   "qte": 0.2688,
+   "prix": 1256.0,
+   "montant": 300.0,
+   "motif": "Tranche 1 cash validée par Jérôme (16 oct) — cours d'ouverture US 16 oct 1256.00 USD (1re minute 15h30 Paris, Yahoo), qté 0.2688 via EURUSD 1.1252 ; Cœur 2000→2300 € ; prix réf. moyen 1156.68 USD (change ignoré). Pas de frais."
   }
  ],
  "regles": [
