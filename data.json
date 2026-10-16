@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-15T22:28:22+02:00",
+ "generated_at": "2026-10-16T11:07:22+02:00",
  "source": "financia-portefeuille-paper-50k.xlsx",
  "recalculated": true,
  "capital": 50000.0,
@@ -724,6 +724,15 @@
    "prix": null,
    "montant": null,
    "motif": "Pas d'opération. Snapshot du 15 oct (cours de clôture réels). Stops non touchés (CEG 275,00 USD > 268,5)."
+  },
+  {
+   "date": "2026-10-16",
+   "ticker": "EXSA",
+   "action": "Achat",
+   "qte": 6.2686,
+   "prix": 63.81,
+   "montant": 400.0,
+   "motif": "Tranche 1 cash validée par Jérôme (16 oct) — cours Xetra 63,81 € (dernier cours 10h50, relevé 11h06 Paris), qté 6,2686 ; prix réf. moyen 62,8481 €. Pas de frais."
   }
  ],
  "regles": [
