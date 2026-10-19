@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T17:52:02+02:00",
+ "generated_at": "2026-10-19T19:05:29+02:00",
  "source": "financia-portefeuille-paper-50k.xlsx",
  "recalculated": true,
  "capital": 50000.0,
@@ -450,9 +450,9 @@
    "investi": 4000.0,
    "notes": "Clôture 80.71 EUR (+6.48 % vs Point 0 75.8)",
    "perf_depuis_achat": 0.06477500000000003,
-   "stop": 69.74,
+   "stop": 75.8,
    "stop_devise": "EUR",
-   "distance_stop": 0.15729853742472044
+   "distance_stop": 0.0647757255936674
   },
   {
    "ticker": "HO.PA",
@@ -790,6 +790,15 @@
    "prix": null,
    "montant": null,
    "motif": "Pas d'opération supplémentaire à la clôture (tranche 1 déjà journalisée). Snapshot du 16 oct (cours de clôture réels). Stops non touchés (CEG 271,37 USD > 268,5)."
+  },
+  {
+   "date": "2026-10-19",
+   "ticker": "TTE.PA",
+   "action": "Stop relevé",
+   "qte": null,
+   "prix": 75.8,
+   "montant": null,
+   "motif": "Décision Jérôme 19 oct (avis RiskGuard) : stop TTE relevé de 69,74 € à 75,8 € (prix d'achat). Règle : un stop ne se déplace que dans le sens du gain."
   }
  ],
  "regles": [
