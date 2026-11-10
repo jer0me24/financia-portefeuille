@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T22:27:04+01:00",
+ "generated_at": "2026-11-10T15:57:54+01:00",
  "source": "financia-portefeuille-paper-50k.xlsx",
  "recalculated": true,
  "capital": 50000.0,
@@ -1359,6 +1359,24 @@
    "prix": 47.81,
    "montant": null,
    "motif": "Décision Jérôme 9 nov : stop LDO abaissé de 48.30 € à 47.81 € (plus bas du 6 nov). Remplace le stop précédent."
+  },
+  {
+   "date": "2026-11-10",
+   "ticker": "HO.PA",
+   "action": "Achat",
+   "qte": 4.2608,
+   "prix": 234.7,
+   "montant": 1000.0,
+   "motif": "Renforts défense validés par Jérôme le 10 nov (widget t123s530) — cours 234.70 EUR (Yahoo Finance HO.PA, 15:42 Paris, marché ouvert), qté 4.2608 ; Tactique 1500→2500 € ; prix réf. moyen 229.8944 EUR (ancien 226.80 EUR). Stop 220 €, objectif 260 €. Pas de frais."
+  },
+  {
+   "date": "2026-11-10",
+   "ticker": "LDO.MI",
+   "action": "Achat",
+   "qte": 19.4099,
+   "prix": 51.52,
+   "montant": 1000.0,
+   "motif": "Renforts défense validés par Jérôme le 10 nov (widget t123s530) — cours 51.52 EUR (Yahoo Finance LDO.MI, 15:42 Paris, marché ouvert), qté 19.4099 ; Tactique 1500→2500 € ; prix réf. moyen 49.5385 EUR (ancien 48.30 EUR). Stop 47.81 €, objectif relevé à 57 €. Pas de frais. Après les 2 achats (2 000 €) : cash 6400.74 → 4400.74 €."
   }
  ],
  "regles": [
